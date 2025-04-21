@@ -7,7 +7,7 @@ FROM python:3.9-slim
 
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
-COPY ./ requirements.txt 
+COPY requirements.txt.\
 WORKDIR /app
 
 
