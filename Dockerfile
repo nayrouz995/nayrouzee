@@ -11,7 +11,7 @@ COPY . /app
 WORKDIR /app
 
 
-+RUN apt-get update && apt-get install -y g+ 
+RUN apt-get update && apt-get install -y g+ 
 # This command compiles your app using GCC, adjust for your source code
 RUN g++ -o myapp main.cpp
 
