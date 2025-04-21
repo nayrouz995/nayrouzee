@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "432513081606",
+    "project_id": "shubatnay",
+    "storage_bucket": "shubatnay.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432513081606:android:a3b8579541886f9360fe87",
+        "android_client_info": {
+          "package_name": "com.tripoli.nayrouz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK0NKc6WMwQ-BvC3ydviBIsfFQguy0zdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
