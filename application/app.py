@@ -14,12 +14,12 @@ st.write("")
 st.subheader("Select Your Role")
 
 col1, col2 = st.columns(2)
-institite_logo = Image.open("./assets/institute_logo.png")
+institite_logo = Image.open("../assets/institute_logo.png")
 with col1:
     st.image(institite_logo, output_format="jpg", width=230)
     clicked_institute = st.button("Institute")
 
-company_logo = Image.open("./assets/company_logo.jpg")
+company_logo = Image.open("../assets/company_logo.jpg")
 with col2:
     st.image(company_logo, output_format="jpg", width=230)
     clicked_verifier = st.button("Verifier")
