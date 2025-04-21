@@ -10,8 +10,7 @@ FROM python:3.9-slim
 
 WORKDIR /app
 COPY  requirements.txt.\
-
-RUN pip install --no-cache-dir -r requirements.txt 
+RUN pip install --no-cache-dir -r requirements.txt.\ 
 # This command compiles your app using GCC, adjust for your source code
 COPY . ./
 EXPOSE 8501
