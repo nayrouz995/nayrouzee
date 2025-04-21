@@ -9,7 +9,7 @@ FROM python:3.9-slim
 # and set that as the working location
 
 WORKDIR /app
-COPY ./ requirements.txt
+COPY  requirements.txt.\
 
 RUN pip install --no-cache-dir -r requirements.txt 
 # This command compiles your app using GCC, adjust for your source code
