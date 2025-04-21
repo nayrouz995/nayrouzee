@@ -7,9 +7,11 @@ FROM gcc:latest
 
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
+COPY . /app
+WORKDIR /app
 
+
++RUN apt-get update && apt-get install -y g+ 
 # This command compiles your app using GCC, adjust for your source code
 RUN g++ -o myapp main.cpp
 
