@@ -3,19 +3,19 @@
 # See https://hub.docker.com/r/library/gcc/ for all supported GCC
 # tags from Docker Hub.
 # See https://docs.docker.com/samples/library/gcc/ for more on how to use this image
-FROM ubuntu:latest
+FROM python:3.9-slim   
 
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
-COPY . /app 
+COPY ./ requirements.txt 
 WORKDIR /app
 
 
-RUN apt-get update && apt-get install -y g++ build-essential 
+RUN pip install --no-cache-dir -r requirements.txt 
 # This command compiles your app using GCC, adjust for your source code
-RUN g++ -o myapp main.cpp
-
+COPY . ./
+EXPOSE 8501
 # This command runs your application, comment out this line to compile only
-CMD ["./myapp"]
+CMD ["streamlit","run","app.py","--server.address=0.0.0.0","--server.port=8501","--server.enableCORS=false"]
 
-LABEL Name=shubatnay Version=0.0.1
+
