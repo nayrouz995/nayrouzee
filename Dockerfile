@@ -9,10 +9,10 @@ FROM python:3.9-slim
 # and set that as the working location
 
 WORKDIR /app
-COPY  requirements.txt.\
+COPY . ./
 RUN pip install --no-cache-dir -r requirements.txt.\ 
 # This command compiles your app using GCC, adjust for your source code
-COPY . ./
+
 EXPOSE 8501
 # This command runs your application, comment out this line to compile only
 CMD ["streamlit","run","app.py","--server.address=0.0.0.0","--server.port=8501","--server.enableCORS=false","python"]
